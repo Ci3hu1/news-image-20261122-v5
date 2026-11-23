@@ -425,8 +425,11 @@ def _tile_exam(d, w, h, ff):
                fill=MUTED, width=max(2, h // 36))
     d.ellipse([int(w * 0.62), int(h * 0.18), int(w * 0.90), int(h * 0.62)],
               outline=RED, width=max(3, h // 24))
-    d.text((w * 0.66, h * 0.34), "AI",
-           font=ff("sans_bold", 30), fill=RED)
+    # "AI" centred in the oval (anchor mm at the oval centre 0.76w/0.40h).
+    # Was (0.66w, 0.34h) top-left at size 30: it sat low-left and the "A"
+    # touched the oval's left edge. Size 24 leaves clearance on all sides.
+    d.text((w * 0.76, h * 0.40), "AI",
+           font=ff("sans_bold", 24), fill=RED, anchor="mm")
     d.text((w * 0.62, h * 0.68), "RESIGNS",
            font=ff("sans_bold", 20), fill=INK)
 

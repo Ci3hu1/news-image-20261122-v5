@@ -218,6 +218,36 @@ class TestBorderClearance(unittest.TestCase):
         self.assertLessEqual(426 + 12, 440 - 2)
 
 
+class TestAIOval(unittest.TestCase):
+    """Joni, 23 Nov 14:48: the word "AI" must sit inside its red
+    oval (Seoul card, "Seoul minister quits in AI row"). It was
+    drawn top-left at (0.66w, 0.34h) in 30px type, so it sat low-left
+    and the "A" touched the oval's left edge. It must be centred
+    in the oval with clearance on all sides."""
+
+    def test_ai_text_is_centred_in_oval(self):
+        # Oval spans [0.62w, 0.18h, 0.90w, 0.62h] -> centre
+        # (0.76w, 0.40h). The "AI" text must be drawn at that centre
+        # with anchor="mm" so it is truly centred, not top-left.
+        src = renderer_source()
+        m = re.search(
+            r'd\.text\(\(w \* 0\.76, h \* 0\.40\), "AI",\s*\n'
+            r'\s*font=ff\("sans_bold", (\d+)\), fill=RED, anchor="mm"\)',
+            src)
+        self.assertIsNotNone(
+            m, '"AI" must be drawn centred (anchor="mm") at the '
+               'oval centre (0.76w, 0.40h)')
+        # Oval is 0.28w wide x 0.44h tall; at 24px the "AI" is ~28px
+        # wide in the 2x tile space, leaving clearance on all sides.
+        self.assertLessEqual(int(m.group(1)), 26)
+
+    def test_ai_oval_exists(self):
+        src = renderer_source()
+        self.assertIn(
+            'd.ellipse([int(w * 0.62), int(h * 0.18), '
+            'int(w * 0.90), int(h * 0.62)]', src)
+
+
 class TestMapPins(unittest.TestCase):
     """Pin number labels must sit inside the map box (816-862) with
     >=2px clearance, and below the section-label row (ends ~814).
