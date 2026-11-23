@@ -1,12 +1,14 @@
 # NOTES — news-image-20261122 v5 (the fix for v4)
 
-**Status:** BUILT, NOT SUBMITTED. Entry commit PENDING (to be set on
-commit). Repo https://github.com/Ci3hu1/news-image-20261122-v5,
-master, public. Bundle + kit check PENDING — the builder session's
-usage rows flush only after the builder turn ends; the parent re-runs
-bundle + check after the rows flush. Do NOT submit before the kit
-check returns ok=true failed=[]. Do NOT submit without Joni's
-'Setuju' on the exact entry.
+**Status:** BUILT, NOT SUBMITTED. Entry commit
+`6571508ff6e42f8d4ebe7bdbd062acc034b47601` (repo
+https://github.com/Ci3hu1/news-image-20261122-v5, main, public,
+created 2026-11-23T07:32:13Z — after the competition opened).
+Bundle + kit check PENDING — the builder session's usage rows flush
+only after the builder turn ends; the parent re-runs bundle + check
+after the rows flush. Do NOT submit before the kit check returns
+ok=true failed=[]. Do NOT submit without Joni's 'Setuju' on the
+exact entry.
 
 ## What v5 is
 
