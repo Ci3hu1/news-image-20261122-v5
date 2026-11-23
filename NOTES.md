@@ -100,3 +100,12 @@ slot). Entries close 24 Nov 2026 07:00 WIB. Results 7 Dec 2026.
 - Kit check: ok=true, failed=[] (2 intake items deferred to server, hand-verified: repo public, owner Ci3hu1, created 07:32:13Z after open, commit in repo; uncommitted change is only __pycache__/)
 - Usage: 1 row attached (builder session 247eb252)
 - NOT submitted — awaiting Joni's "Setuju". This is submission #5 of max 5 (last slot).
+
+## Submission
+- Submission: 01a20767-08e2-71cf-baef-71dc0a5a1850 (submitted 23 Nov 2026 ~14:55 WIB on Joni's "Setuju")
+- Entry commit: 7283baa7b47107f04ebfdbed64375f64f5e4ba32 (includes the AI-oval fix)
+- Stage: checked (passed checks)
+- Bundle: ~/workspace/tools/makefun/bundles/ni22-v5-bundle.tar.gz (2,054,005 B, sha256 13742ee2f8cec2750af8f7b9f64dde2cdfdaace7e5792b09048e41d30c3d2990)
+- Kit check: ok=true, failed=[] (3 intake items deferred to server, hand-verified: repo public, owner Ci3hu1, created 07:32:13Z after open, commit in repo)
+- Claim code: saved ONLY in ~/.config/makefun/news-image-20261122-v5-submission.json (0600)
+- NOTE: v3 (01a20709) is PINNED as final. v5 is the latest submitted but does NOT count as final while v3 is pinned. If v5's live score beats v3 (981,243), pin v5 as final; if below, v3 stays final. This was submission #5 of max 5 — quota exhausted for NI22.
