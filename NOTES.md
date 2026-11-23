@@ -93,3 +93,10 @@ slot). Entries close 24 Nov 2026 07:00 WIB. Results 7 Dec 2026.
   stands as final automatically (Force_Last).
 - Claim code: save ONLY in
   ~/.config/makefun/news-image-20261122-v5-submission.json (0600).
+
+## Bundle + kit check (parent, 23 Nov ~14:44 WIB)
+- Entry commit: 6571508ff6e42f8d4ebe7bdbd062acc034b47601
+- Bundle: ~/workspace/tools/makefun/bundles/ni22-v5-bundle.tar.gz (2,030,478 B, sha256 0d799048c6f823a6072a44605517ca4a2273371a1167d0932e661232815be9f7)
+- Kit check: ok=true, failed=[] (2 intake items deferred to server, hand-verified: repo public, owner Ci3hu1, created 07:32:13Z after open, commit in repo; uncommitted change is only __pycache__/)
+- Usage: 1 row attached (builder session 247eb252)
+- NOT submitted — awaiting Joni's "Setuju". This is submission #5 of max 5 (last slot).
